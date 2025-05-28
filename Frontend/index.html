@@ -612,7 +612,7 @@
                 const monthValue = monthInput.value;
 
                 try {
-                    const response = await fetch(`http://localhost:3000/api/payslips/${empId}/${monthValue}`);
+                    const response = await fetch(`http://98.80.67.100:3100/api/payslips/${empId}/${monthValue}`);
                     if (!response.ok) {
                         throw new Error('Payslip not found');
                     }

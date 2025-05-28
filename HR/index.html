@@ -429,7 +429,7 @@
         async function loadPayslips(department = '') {
             const payslipsContainer = document.getElementById('payslips-container');
             try {
-                const url = department ? `http://localhost:3000/api/payslips?department=${encodeURIComponent(department)}` : 'http://localhost:3000/api/payslips';
+                const url = department ? `http://98.80.67.100:3100/api/payslips?department=${encodeURIComponent(department)}` : 'http://98.80.67.100:3100/api/payslips';
                 const response = await fetch(url);
                 const payslips = await response.json();
 
@@ -561,8 +561,8 @@
 
                 try {
                     const url = department ? 
-                        `http://localhost:3000/api/pf-records/${month}?department=${encodeURIComponent(department)}` : 
-                        `http://localhost:3000/api/pf-records/${month}`;
+                        `http://98.80.67.100:3100/api/pf-records/${month}?department=${encodeURIComponent(department)}` : 
+                        `http://98.80.67.100:3100/api/pf-records/${month}`;
                     const response = await fetch(url);
                     const pfRecords = await response.json();
 

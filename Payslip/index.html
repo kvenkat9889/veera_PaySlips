@@ -554,7 +554,7 @@
 
         async function savePayslip(payslipData) {
             try {
-                const response = await fetch('http://localhost:3000/api/payslips', {
+                const response = await fetch('http://98.80.67.100:3100/api/payslips', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payslipData)
