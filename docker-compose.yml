@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: veera_postgres11
+    ports:
+      - "5459:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: payroll_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  backend:
+    build: ./Backend
+    container_name: veera_backend11
+    ports:
+      - "3100:3100"
+    depends_on:
+      - postgres
+    environment:
+      NODE_ENV: production
+
+  frontend:
+    build: ./Frontend
+    container_name: veera_frontend11
+    ports:
+      - "9047:80"
+
+  hr:
+    build: ./HR
+    container_name: veera_hr11
+    ports:
+      - "9048:80"
+
+  payslip:
+    build: ./Payslip
+    container_name: veera_payslip11
+    ports:
+      - "9049:80"
+
+volumes:
+  pgdata:
+
