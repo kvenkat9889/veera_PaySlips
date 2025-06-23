@@ -444,7 +444,7 @@
                 <div class="form-group">
                     <label for="uan-number">UAN No</label>
                     <div class="input-container">
-                        <input id="uan-number" name="uan-number" placeholder="939999999999" required type="text" pattern="[0-9]{12}" title="12-digit UAN number"/>
+                        <input id="uan-number" name="uan-number" placeholder="939999999999" required type="text" pattern="[0-9]{12}" title="12-digit UAN number" maxlength="12"/>
                         <i class="fas fa-check validation-icon"></i>
                     </div>
                     <span class="error-message" id="uan-number-error"></span>
@@ -452,7 +452,7 @@
                 <div class="form-group">
                     <label for="pan-number">PAN No</label>
                     <div class="input-container">
-                        <input id="pan-number" name="pan-number" placeholder="JASWP9876H" required type="text" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" title="10-character PAN (e.g., ABCDE1234F)"/>
+                        <input id="pan-number" name="pan-number" placeholder="JASWP9876H" required type="text" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" title="10-character PAN (e.g., ABCDE1234F)" maxlength="10"/>
                         <i class="fas fa-check validation-icon"></i>
                     </div>
                     <span class="error-message" id="pan-number-error"></span>
@@ -460,7 +460,7 @@
                 <div class="form-group">
                     <label for="pf-number">Provident Fund No</label>
                     <div class="input-container">
-                        <input id="pf-number" name="pf-number" placeholder="WWEER87655667673" required type="text"/>
+                        <input id="pf-number" name="pf-number" placeholder="WWEER87655667673" required type="text" maxlength="23" minlength="12"/>
                         <i class="fas fa-check validation-icon"></i>
                     </div>
                     <span class="error-message" id="pf-number-error"></span>
@@ -468,7 +468,7 @@
                 <div class="form-group">
                     <label for="esic-number">ESIC No</label>
                     <div class="input-container">
-                        <input id="esic-number" name="esic-number" placeholder="ESIC090292" required type="text"/>
+                        <input id="esic-number" name="esic-number" placeholder="ESIC090292" required type="text" maxlength="17"/>
                         <i class="fas fa-check validation-icon"></i>
                     </div>
                     <span class="error-message" id="esic-number-error"></span>
